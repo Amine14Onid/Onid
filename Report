@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول - الديوان الوطني للسقي وصرف المياه</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f5f5f5;
+        }
+        .login-container {
+            margin-top: 100px;
+        }
+        .logo {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+        .login-box {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <img src="logo.png" alt="Logo" class="logo">
+    <h2>تسجيل الدخول - الديوان الوطني للسقي وصرف المياه</h2>
+
+    <div class="login-box">
+        <input type="text" id="username" placeholder="اسم المستخدم">
+        <input type="password" id="password" placeholder="كلمة المرور">
+        <button onclick="login()">تسجيل الدخول</button>
+        <div id="error-message" class="error"></div>
+    </div>
+</div>
+
+<script>
+    function login() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        var errorMessage = document.getElementById("error-message");
+
+        if (username === "ONID.DG" && password === "ONID2005") {
+            window.location.href = "report.html"; // سيتم توجيه المستخدم إلى صفحة التقرير
+        } else {
+            errorMessage.innerText = "اسم المستخدم أو كلمة المرور غير صحيحة.";
+        }
+    }
+</script>
+
+</body>
+</html>
